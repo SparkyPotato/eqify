@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="eqifyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2638" />
+      <stop offset="100%" stop-color="#0c1017" />
+    </linearGradient>
+
+    <linearGradient id="eqifyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="eqifyFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base with Border -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#eqifyBg)" stroke="#2b384e" stroke-width="2" />
+
+  <!-- Underlying EQ Curve Area Fill -->
+  <path d="M 10 44 C 18 44, 22 20, 32 20 C 42 20, 46 44, 54 44 L 54 48 L 10 48 Z" fill="url(#eqifyFill)" />
+
+  <!-- Equalizer Spectrum Bars -->
+  <line x1="17" y1="45" x2="17" y2="38" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" opacity="0.45" />
+  <line x1="24.5" y1="45" x2="24.5" y2="28" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+  <line x1="32" y1="45" x2="32" y2="22" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" opacity="0.85" />
+  <line x1="39.5" y1="45" x2="39.5" y2="28" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+  <line x1="47" y1="45" x2="47" y2="38" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" opacity="0.45" />
+
+  <!-- Primary Sweeping Parametric EQ Curve -->
+  <path d="M 10 44 C 18 44, 22 20, 32 20 C 42 20, 46 44, 54 44" stroke="url(#eqifyGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Apex Resonant Filter Node Dot with Core Glow -->
+  <circle cx="32" cy="20" r="5" fill="#f59e0b" />
+  <circle cx="32" cy="20" r="2.2" fill="#ffffff" />
+</svg>
