@@ -1,3 +1,5 @@
+#![feature(portable_simd)]
+
 pub mod audio;
 
 use audio::{AudioEngineManager, FrequencyResponseResult, ToneParams};
@@ -110,7 +112,7 @@ mod commands {
         num_points: Option<usize>,
     ) -> FrequencyResponseResult {
         let count = num_points.unwrap_or(400);
-        audio::compute_frequency_response(&filters, preamp, count, 48000.0)
+        audio::compute_frequency_response(&filters, preamp as f32, count, 48000.0)
     }
 
     #[tauri::command]

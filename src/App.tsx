@@ -528,7 +528,7 @@ export default function App() {
         data-tauri-drag-region="deep"
         onMouseDown={handleHeaderMouseDown}
         onDoubleClick={handleHeaderDoubleClick}
-        className="h-12 px-4 bg-[#141820] border-b border-[#1f2533] flex items-center justify-between select-none z-30 cursor-default"
+        className="h-12 px-4 bg-[#141820] border-b border-[#1f2533] flex items-center justify-between select-none relative z-40 cursor-default"
       >
         {/* Left: Brand logo & Preset pill */}
         <div data-tauri-drag-region="deep" className="flex items-center gap-4">
@@ -538,7 +538,7 @@ export default function App() {
 
           {/* Profile Selector Dropdown */}
           <div
-            className="relative"
+            className="relative z-50"
             ref={profileDropdownRef}
             onMouseDown={(e) => e.stopPropagation()}
           >
@@ -700,7 +700,7 @@ export default function App() {
       </header>
 
       {/* Main Workspace (Graph on Left + Bands Sidebar on Right) */}
-      <main className="flex-1 flex overflow-hidden p-2 gap-2 relative">
+      <main className="flex-1 flex overflow-hidden p-2 gap-2 relative z-0">
         {/* Frequency Response Graph Area */}
         <div className="flex-1 h-full relative">
           <EqGraph
